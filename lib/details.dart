@@ -6,11 +6,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 
 class Details extends StatefulWidget {
-  const Details({super.key, required this.index});
+  const Details({super.key, required this.index, required this.ishot});
   final int index ;
+  final bool ishot ;
 
   @override
-  State<Details> createState() => _DetailsState(index);
+  State<Details> createState() => _DetailsState(index,ishot);
 }
 
 class _DetailsState extends State<Details> {
@@ -31,7 +32,9 @@ class _DetailsState extends State<Details> {
 
   int index = 0 ;
 
-  _DetailsState(this.index);
+  _DetailsState(this.index, bool ishot){
+    isIced = !ishot;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +45,7 @@ class _DetailsState extends State<Details> {
           children: [
             isIced ?
             IcedItems(drinksList: DrinkModel.icedDrinks,index: index,):
-            HotItems(drinksList: DrinkModel.hotDrinks,),
+            HotItems(drinksList: DrinkModel.hotDrinks,index: index,),
             //size
             Positioned(
               bottom: 100,

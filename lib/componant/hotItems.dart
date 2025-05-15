@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 
 class HotItems extends StatefulWidget {
-  const HotItems({super.key, required this.drinksList});
+
+  const HotItems({super.key, required this.drinksList, required this.index});
   final List drinksList;
+  final int index;
 
   @override
-  State<HotItems> createState() => _HotItemsState(drinksList);
+  State<HotItems> createState() => _HotItemsState(drinksList, index);
 }
 
 class _HotItemsState extends State<HotItems> {
-  //animation
-  final PageController controller = PageController(viewportFraction: 0.7);
+  //items
+  List drinks=[];
   double currentPage =0;
+  _HotItemsState(List drinksList, int index){
+    currentPage = index.toDouble() ;
+    drinks = drinksList;
+  }
+
+  //animation
+   PageController controller = PageController(viewportFraction: 0.7);
+
   @override
   void initState() {
+    controller = PageController(initialPage: currentPage.toInt(), viewportFraction: 0.7);
     controller.addListener((){
       setState(() {
         currentPage = controller.page ?? 1 ;
@@ -22,11 +33,7 @@ class _HotItemsState extends State<HotItems> {
     super.initState();
   }
 
-  //items
-  List drinks=[];
-  _HotItemsState(List drinksList){
-    drinks = drinksList;
-  }
+
 
   @override
   Widget build(BuildContext context) {

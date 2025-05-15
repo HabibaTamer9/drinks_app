@@ -170,7 +170,7 @@ class DrinkCard extends StatelessWidget {
               ),
               child: IconButton(
                   onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Details(index: index,)));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Details(index: index,ishot: ishot,)));
                   },
                   icon: Icon(
                     Icons.arrow_forward,
