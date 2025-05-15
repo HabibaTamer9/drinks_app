@@ -83,26 +83,30 @@ class DrinkCard extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               children: [
                 Positioned(
-                  bottom: 43,
-                  left: 11,
-                  child: Container(
-
-                    width: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.shade900,
-                            spreadRadius: 4,
-                            blurRadius: 28
-                        )
-                      ],
+                  bottom: 22,
+                  left: 0,
+                  right: 0,
+                  child: Image.asset(
+                      "assets/drinks/Ellipse 2.png",
                     ),
+                  // child: Container(
+                  //
+                  //   width: 60,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(100),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //           color: Colors.grey.shade900,
+                  //           spreadRadius: 4,
+                  //           blurRadius: 28
+                  //       )
+                  //     ],
+                  //   ),
                     // child: Image.asset(
                     //   "assets/drinks/shadow.png",
                     //   fit: BoxFit.fill,
                     // ),
-                  ),
+                 // ),
                 ),
                 Image.asset(
                   image,
@@ -125,25 +129,31 @@ class DrinkCard extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               children: [
                 Positioned(
-                  bottom: 8,
-                  child: Container(
-                    height: 9,
-                    width: 70,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.shade900,
-                            spreadRadius: 1.5,
-                            blurRadius: 30
-                        )
-                      ],
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Image.asset(
+                      "assets/drinks/shadow.png",
+                      fit: BoxFit.fill,
                     ),
-                    // child: Image.asset(
-                    //   "assets/drinks/shadow.png",
-                    //   fit: BoxFit.fill,
-                    // ),
-                  ),
+                  // child: Container(
+                  //   height: 9,
+                  //   width: 70,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(100),
+                  //     boxShadow: [
+                  //       BoxShadow(
+                  //           color: Colors.grey.shade900,
+                  //           spreadRadius: 1.5,
+                  //           blurRadius: 30
+                  //       )
+                  //     ],
+                  //   ),
+                  //   // child: Image.asset(
+                  //   //   "assets/drinks/shadow.png",
+                  //   //   fit: BoxFit.fill,
+                  //   // ),
+                  // ),
                 ),
                 Image.asset(
                   image,
